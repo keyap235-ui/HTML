@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta Charset="UTF-8">
+<meta name="viewport" content="with=device-width,  intial-scale=1.0">
+<title>Structure of HTML</title>
+</head>
+<boby>
+    Introduction to HTML
+    HTML - Hyper Text Markup Language
+    hello world
+</boby>
+</HTML>
