@@ -7,7 +7,7 @@ body {
 }
 
 .page-header {
-    background-image: linear-gradient(to right, rgb(122, 40, 122), rgb(1, 1, 1));
+    background-image: linear-gradient(to right, rgb(122, 40, 122), coral);
     border-radius: 16px;
     text-align: center;
     color: white;
