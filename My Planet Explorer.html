@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Planet Explorer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        boby { background-color: #f0f4ff; }
+        .navbar { background-color: darkblue; }
+        .navbar-brand, .nav-link { color: white ; }
+        .section-title { color: darkblue; margin: 20px 0 10px; }
+    </style>
+</head>
+
+<body>
+     <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">Planet Explorer</a>
+        <ul class="navbar-nav">
+            <li class="nav-items"><a class="link" href="#">Home</a></li>
+            <li class="nav-items"><a class="link" href="#">planets</a></li>
+            <li class="nav-items"><a class="link" href="#">stars</a></li>
+        </ul>
+     </nav>
+     <div class="container mt-4">
+
+        <h4 class="section-title">Scanning the Galaxy...</h4>
+        <div class="spinner-border text-primary" role="status"></div>
+        <div class="spinner-border text-warning" role="status"></div>
+        <div class="spinner-border text-danger" role="status"></div>
+
+        <h4 class="section-title">featured planets</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-by">
+                        <h5 class="card-title">Earth</h5>
+                        <p class="card-text">Our home planet - the only one known to have life!</p>
+                        <a href="#" class="btn btn-primany">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-by">
+                        <h5 class="card-title">Jupiter</h5>
+                        <p class="card-text">The biggest planet - its giant storm, never stops!</p>
+                        <a href="#" class="btn btn-warning">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="section-title">Browse more planets</h4>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li> 
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">next</a></li>
+        </ul>
+     </div>
+     
+</body>
+
+</html>
