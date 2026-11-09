@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Phone Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstra@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        boby { background-color: aquamarine;}
+        h1 { color: brown;}
+        .card-label { font-size: 11px; color: blueviolet; text-transform: uppercase;}
+        pre { font-size: 13px; color: #333;}
+    </style>
+</head>
+
+<body class="py-4">
+
+    <div class="container">
+        <h1 class="mb-1">My Phone Contact</h1>
+        <p class="text-muted mb-4">Introduction To Objects In Javascript - Grade 4-6</p>
+
+        <div class="card shadow-sm mb-3" style="max-width:400px;">
+            <div class="card-boby">
+                <h5 class="card-title" style="color: rgb(255, 127, 159);">Contact Details</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-items">
+                        <span class="card-label d-block">Name</span>
+                        <strong id="name">-</strong>
+                    </li>
+                    <li class="list-group-items">
+                        <span class="card-label d-block">Phone</span>
+                        <strong id="phone">-</strong>
+                    </li>
+                    <li class="list-group-items">
+                        <span class="card-label d-block">School</span>
+                        <strong id="school">-</strong>
+                    </li>
+                    <li class="list-group-items">
+                        <span class="card-label d-block">City</span>
+                        <strong id="city">-</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm" style="max-width: 400px;">
+        <div class="card-boby">
+            <h6 style="color: aliceblue;">Javascript Object Used</h6>
+            <pre id="codeDisplay"
+            class="bg-light p-3 rounded border mb-0"></pre>
+        </div>
+    </div>
+
+    <script>
+
+        var mycontact ={
+            name: "Keya Patel",
+            phone: "97873-87487",
+            school: "Cnons high school",
+            City: "Mumbai"
+        };
+
+        var nameE1 = document.getElementById("name");
+        var phoneE1 = document.getElementById("phone");
+        nameE1.textContent = mycontact.name;
+        phoneE1.textContent = mycontact.phone;
+
+        var schoolE1 = document.getElementById("school");
+        var cityE1 = document.getElementById("city");
+        nameE1.textContent = mycontact.["school"];
+        phoneE1.textContent = mycontact.["city"];
+
+        var codeE1 = document.getElementById("codeDisplay");
+        codeE1.textContent =
+        'var mycontact = {\n' +
+        ' name : "'+ mycontact.name + '",\n' + 
+        ' phone : "' + mycontact.phone + '",\n' +
+        ' school : "' + mycontact.school + '",\n' + 
+        ' city : "' + mycontact.city + '",\n' +  
+        '};';
+    
+    </script>
+
+</body>
+
+</html>
