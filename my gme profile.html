@@ -10,87 +10,84 @@
             text-align: center;
             padding: 30px;
         }
-        h1 { color: navy;} 
-        button {
-            background-color: navy;
-            color: white;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
+        h1 {
+            color: darkorange;
         }
-        div {
-            border: 1px solid navy;
-            width: 280px;
-            margin: 0%6px auto;
-            padding: 8px 12px;
-            text-align: left;
-            border-radius: 6px;
+        p {
+            color: grey;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .card {
+            background: white;
+            border: 3px solid darkorange;
+            border-radius: 12px;
+            padding: 20px;
+            width: 200px;
+        }
+        .planet-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: grey;
+        }
+        .planet-fact {
+            color: grey;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        button {
+            background: darkorange;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-
-    <h1>My Game Profile</h1>
-    <button onclick="ShowProfile()">Show Prifile</button>
-    
-    <div>Name: <span id="name"></span></div>
-    <div>Score: <span> id="score"></span></div>
-    <div>Top Score: <span id="top score"></span></div>
-    <div>Rank: <span id="rank"></span></div>
-    <div>Greeting: <span id="greeting"></span></div>
-    <div>Stars: <span id="stars"></span></div>
-    <div>Bonus Level: <span id="Bonus Level"></span></div>
-    <div>Team Name: <span id="team"></span></div>
-
+    <h1>My Planet Cards</h1>
+    <p>Use a JavaScript calss to build planet cards!</p>
+    <div class="cards">
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <div id="card3"></div>
+    </div>
     <script>
-        function ShowProfile() {
-            
-            let name = "Alex";
-            let myscore= 75;
-            let highscore = 100;
-            let bonus = null;
-            let team; 
-
-            let isTopscore = myscore == highscore;
-
-            let rank;
-            if (myscore >= 80) {
-                rank = "Gold";
-            } else if (myscore >= 50) {
-                rank = "silver";
-            } else {
-                rank = "Bronze";
+        class Planet {
+            constructor(name, fact) {
+                this.name = name;
+                this.fact = fact;
             }
-
-            let hour = new data().gethours();
-            let greeting;
-            if (hour < 12) {
-                greeting = "good morning!";
-            } else if (hour < 17 ) {
-                greeting = "good afternoon!";
-             } else {
-                greeting = "good evening";
-             }
-
-             let stars = "";
-             let count = 0;
-             while (count < 5) {
-                stars = stars + "* ";
-                count = count + 1;
-             }
-
-                    document.getElementById("name").innerHTML = name;
-                    document.getElementById("score").innerHTML = myscore + " out of " + highscore
-                    document.getElementById("record").innerHTML = isTopscore;
-                    document.getElementById("rank").innerHTML = rank;
-                    document.getElementById("greeting").innerHTML = greeting;
-                     document.getElementById("stars").innerHTML = stars;
-                    document.getElementById("bonus").innerHTML = bonus;
-                    document.getElementById("team").innerHTML = team;
-
+            describe() {
+                return this.na,e + ": " + this.fact;
             }
-    </script>
+        }
+
+        function
+    </script>showPlanets() {
+        let p1 = new planet("Earth", "The only planet with life");
+        let p2 = new planet("Mars", "Know as the rd planets");
+        let p1 = ne3 planet("Saturn", "Has ring made of ice");
+
+        document.getELemenbyId(card1).innerHTML = "<div class='card'><div>
+        class='planet-name'>" +p1.name + "</div>" + "<div class='planet-fact'>" + p1.decribe() + "</div></div>
+
+        document.getELemenbyId(card2).innerHTML = "<div class='card'><div
+        class='planet-name'>" +p2.name + "</div>" + "<div class='planet-fact'>" + p2.decribe() + "</div>
+        </div>
+
+        document.getELemenbyId(card3).innerHTML = "<div class='card'></div>
+        class='planet-name'>" +p3.name + "</div>" + "<div class='planet-fact'>" + p3.decribe() + "</div>
+        </div>
+
+
 </body>
 
 </html>
