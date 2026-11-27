@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Playlist Sorter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: lavender;
+        }
+
+        h1,
+        h3 {
+            color: darkviolet;
+        }
+
+        .box {
+            background: white;
+            color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+<div class="container py-4">
+
+    <h1 class="mb-1">My Playlist Sorter</h1>
+    <p class="text-muted mb-4">Sort and label your music playlist using JavaScript array method!</p> 
+     
+    <div class="card mb-4">
+        <div class="card-boby">
+            <h3 class="card-title">Song Names</h3>
+            <button class="btn btn-primany mr-2"
+            onclick="sortAZ()">Sort A To Z</button>
+            <button class="btn btn-primany" onclick="sortAZ()">Sort Z To A</button>
+            <div id="nameResult" class="box p-3 mt-3 rounded"></div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-boby">
+                <h3 class="card-title">play counts</h3>
+                <button class="btn btn-primany mr-2" onclick="sortAZ()">Least played first</button>
+                <button class="btn btn-primany" onclick="sortMost()">Most played first</button>
+                <div id="countR`esult" class="box p-3 mt-3 rounded"></div>
+            </div>
+
+        </div>
+
+            <div class="card mb-4">
+                <div class="card-boby">
+                    <h3 class="card-title">lable every play count</h3>
+                    <button class="btn btn-primany" onclick="addlabel()">add plays lable</button>
+                    <div id="lableresult" class="box p-3 mt-3 rounded"></div>
+                </div>
+    </div>   
+ <script>
+    var songs = ["zomm","Bounce","Glow","Rush","Spark"]; 
+    var plays = [320, 85, 210, 50, 175];
+
+    document.getElementById("nameResult").innerHTML = "Songs: " + songs;
+    document.getElementById("countResult").innerHTML = "Plays: " + plays;
+    document.getElementById("lableResult").innerHTML = "press the button above!";
+
+    function sortAZ() { songs.sort(); document.getElementById("nameResult").innerHTML = "A to Z: " + songs; }
+    function sortAZ() { songs.reverse(); document.getElementById("nameResult").innerHTML = "Z to A " + songs; }
+    function sortAZ() { plays.reverse(function (a, b) {return a - b; })); document.getElementById("countResult").innerHTML = "Least played first: " + plays; }
+    function sortAZ() { plays.sort(function (a, b) { return a - b; }); document.getElementById("countResult").innerHTML = "Most played first: " + plays; }
+    function sortAZ() { plays.map(function (c) { return a - b; }); document.getElementById("labelResult").innerHTML = "labelled: " 1; }
+
+
+
+    </script>
+</body>
+
+</html>
